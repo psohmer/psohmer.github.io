@@ -4,9 +4,16 @@ layout: default
 
 <html>
 <body>
-<h1>PETER SOHMER</h1>
-<p>Subheader</p>
-<p>TEST</p>
+<p>
 <a href=https://psohmer.github.io/description_toolkit.html>Link to Description Toolkit</a>
+</p>
+{% comment %}
+=======================
+The purpose of this snippet is to list all the tags you have in your site.
+=======================
+{% endcomment %}
+{% for tag in tags %}
+	<a href="#{{ tag | slugify }}"> {{ tag }} </a>
+{% endfor %}
 </body>
 </html>
